@@ -1,18 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F0F0F0;
+  --background: #f0f0f0;
   --foreground: #222222;
 
-  --color-primary: #D9D9D9;
+  --color-primary: #d9d9d9;
   --color-secondary: #000;
   --color-gray: #ccc;
 
+  --screen-xs: 415px;
   --screen-sm: 640px;
   --screen-md: 768px;
   --screen-lg: 1024px;
   --screen-xl: 1280px;
   --screen-2xl: 1536px;
+
+  --spacing-708: 708px;
+  --spacing-410: 410px;
+  --spacing-300: 300px;
+  --spacing-243: 243px;
+  --spacing-13: 13px;
+
+  --radius-15: 15px;
+
+  --width-708: 708px;
+  --width-468: 468px;
+  --width-400: 400px;
+  --width-250: 250px;
+
+  --height-300: 300px;
+  --height-240: 240px;
+  --height-120: 120px;
+  --height-100: 100px;
+
+  --margin-243: 243px;
+  --margin-105: 105px;
+  --margin-100: 100px;
+  --margin-97: 97px;
+  --margin-55: 55px;
+  --margin-47: 47px;
+  --margin-33: 33px;
+
+  --padding-13: 13px;
+
+  --gap-35: 35px;
+  --gap-17: 17px;
+
+  --cols-2-1-1: 2fr 1fr 1fr;
 }
 
 @theme {
@@ -20,15 +54,44 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
 
-  --color-primary: #D9D9D9;
+  --color-primary: #d9d9d9;
   --color-secondary: #000;
   --color-gray: #ccc;
+
+  --radius-15: 15px;
+
+  --screen-xs: 415px;
+
+  --width-708: 708px;
+  --width-468: 468px;
+  --width-400: 400px;
+  --width-250: 250px;
+
+  --height-300: 300px;
+  --height-240: 240px;
+  --height-120: 120px;
+  --height-100: 100px;
+
+  --margin-243: 243px;
+  --margin-105: 105px;
+  --margin-100: 100px;
+  --margin-97: 97px;
+  --margin-55: 55px;
+  --margin-47: 47px;
+  --margin-33: 33px;
+
+  --padding-13: 13px;
+
+  --gap-35: 35px;
+  --gap-17: 17px;
+
+  --cols-2-1-1: 2fr 1fr 1fr;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #222222;
-    --foreground: #F0F0F0;
+    --foreground: #f0f0f0;
 
     --color-primary: #000;
     --color-secondary: #d9d9d9;
@@ -40,4 +103,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Inter, Arial, sans-serif;
+}
+
+.grid-2-1-1 {
+  display: grid;
+  grid-template-columns: var(--cols-2-1-1);
 }

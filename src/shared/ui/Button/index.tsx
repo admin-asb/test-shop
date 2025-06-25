@@ -15,7 +15,7 @@ export default function Button({
     <button
       type={type}
       onClick={onClick}
-      className={`w-full py-3 text-foreground bg-background rounded-[15px] text-4xl cursor-pointer ${className}`}
+      className={`w-full py-3 max-lg:py-2 text-foreground bg-background rounded-15 text-4xl max-lg:text-2xl max-md:text-lg cursor-pointer ${className}`}
     >
       {children}
     </button>

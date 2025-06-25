@@ -14,8 +14,8 @@ export default function ProductsList({ items }: { items: Product[] }) {
   const visibleItems = items.slice(0, visibleCount);
 
   return (
-    <div className="w-full max-w-screen-lg mx-auto mt-[47px] mb-[100px]">
-      <ul className="grid grid-cols-3 gap-[35px]">
+    <div className="w-full max-w-screen-lg mx-auto mt-47 mb-100">
+      <ul className="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-35 max-md:gap-2.5">
         {visibleItems.map((item) => (
           <ProductCard
             key={item.id}

@@ -4,7 +4,7 @@ export default function TestimonialCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-[300px] p-6 rounded-[15px] bg-secondary text-primary">
+    <div className="h-300 p-6 rounded-15 bg-secondary text-primary">
       {children}
     </div>
   );

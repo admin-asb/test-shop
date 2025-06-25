@@ -20,7 +20,7 @@ export default function TestimonialsSwiper({
   reviews,
 }: TestimonialsSwiperProps) {
   return (
-    <section className="sm:mt-[97px] mt-[105px]">
+    <section className="sm:mt-97 mt-105">
       <Swiper
         modules={[Pagination]}
         spaceBetween={20}
@@ -36,7 +36,7 @@ export default function TestimonialsSwiper({
           const safeHTML = xss(text);
 
           return (
-            <SwiperSlide className="w-[468px]" key={id}>
+            <SwiperSlide className="w-468" key={id}>
               <TestimonialCard>
                 <div
                   className="flex flex-col gap-4 text-2xl"

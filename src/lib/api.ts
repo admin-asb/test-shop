@@ -1,8 +1,10 @@
 import { Product } from "@/entities/product/model/product";
 import { Review } from "@/widgets/Testimonials/TestimonialsSwiper";
 
+const BASE_URL = "http://o-complex.com:1337";
+
 export async function fetchReviews(): Promise<Review[]> {
-  const res = await fetch("http://o-complex.com:1337/reviews");
+  const res = await fetch(`${BASE_URL}/reviews`);
 
   if (!res.ok) throw new Error("Ошибка при загрузке отзывов");
 
@@ -12,7 +14,7 @@ export async function fetchReviews(): Promise<Review[]> {
 
 export async function fetchProducts(): Promise<{ items: Product[] }> {
   const res = await fetch(
-    "http://o-complex.com:1337/products?page=1&page_size=20"
+    `${BASE_URL}/products?page=1&page_size=20`
   );
   if (!res.ok) throw new Error("Ошибка загрузки продуктов");
   return res.json();
